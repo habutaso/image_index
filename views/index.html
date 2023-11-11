@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./views/pure/build/base-min.css">
+    <link rel="stylesheet" href="./views/pure/build/grids-min.css">
+    <link rel="stylesheet" href="./views/pure/build/grids-responsive-min.css">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <h1>画像一覧</h1>
+    <div class="pure-g">
+    {% for filename in filenames %}
+        <div class="pure-u-1-5">
+            <img class="pure-img" src="{{ target_dir }}{{ filename }}">
+        </div>
+    {% endfor %}
+    </div>
+    
+</body>
+</html>

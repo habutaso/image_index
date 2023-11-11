@@ -1,0 +1,8 @@
+bottle
+jinja2
+mypy
+isort
+black
+flake8
+pyproject-flake8
+python-dotenv
