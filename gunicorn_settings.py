@@ -1,6 +1,11 @@
 import os 
+import ifcfg
 
+NETWORK_INTERFACE = os.getenv("NETWORK_INTERFACE")
 
-bind = f"127.0.0.1:{str(os.getenv('PORT', '18000'))}"
+ip = ifcfg.interfaces()[NETWORK_INTERFACE]["inet"]
+print(ip)
+
+bind = f"{ip}:{str(os.getenv('PORT', '18000'))}"
 proc_name = "BottleImageServer"
 workers = 1

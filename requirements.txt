@@ -7,3 +7,4 @@ flake8
 pyproject-flake8
 python-dotenv
 gunicorn
+ifcfg
